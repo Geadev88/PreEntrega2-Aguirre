@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.navbar {
+    background-color: #b5caa6;
+    height: 70px;
+    width: 100%;
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+.jumbotron {
+    background-image: url(../assets/header/headerIndex.png);
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    color: rgb(216, 228, 182);
+    text-shadow: 0 0 5px #000;
+}
+
+.jumbotron h1 {
+    color: rgb(189, 223, 125);
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;    
+}
+
+.logo img {
+    width: 5em;
+}
+
+.nav-link {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black !important;
+}
+
+/* inicio nav viejo */
+/* nav {
+    background-color: #b5caa6;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 5em;
+    margin: 1px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu ul li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 1em;
+} */
+/* Fin nav viejo */
+
+header img {
+    width: 100%;
+    /* position: relative; */
+}
+
+/* Inicio del Main */
+
+main {
+    margin: 20px 20px;
+}
+
+h1 {
+    font-size: 1.7em;
+    color: rgb(92, 108, 80);
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+.sectionMain1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sectionMain1 p {
+    font-size: 1.20em;
+    margin: 0.40em 0 0 0;
+}
+
+/* Estilos Footer */
+
+footer {
+    background-color: rgb(181, 202, 166);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 20px;
+}
+
+footer svg {
+    width: 19px;
+    fill: black;
+}
+
+/* Inicio Grid Index */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 200px 1fr 1fr 1fr 1fr;
+    grid-gap: 4px;
+    grid-template-areas:
+        "actions"
+        "filters"
+        "rent1"
+        "rent2"
+        "rent3"
+        "rent4";
+}
+
+.item {
+    background-color: hsl(180, 6%, 87%);
+    border-radius: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.actions {
+    width: 100%;
+    height: 80%;
+}
+
+.containerImgGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerImgGrid img {
+    width: 250px;
+    border-radius: 8px;
+    margin: 20px 10px;
+    transition: all 0.3s;
+}
+
+.containerImgGrid img:hover {
+    transform: scale(1.10);
+    /* transform: scale(0.9); */
+    border-radius: 25px;
+}
+
+.actions {
+    grid-area: actions;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.actions input {
+    border-radius: 4px;
+}
+
+.actions button {
+    margin: 0 20px 0 10px;
+    border-radius: 4px;
+}
+
+.filters {
+    grid-area: filters;
+    padding: 1em;
+}
+
+.filters select {
+    margin: 5px 0 10px 0;
+}
+
+.filters div input {
+    margin: 5px 0 5px 0;
+}
+
+.itemText {
+    padding-left: 20px;
+}
+
+.itemText ul li {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.alq1 {
+    grid-area: rent1;
+    align-items: center;
+}
+
+.alq2 {
+    grid-area: rent2;
+    align-items: center;
+}
+
+.alq3 {
+    grid-area: rent3;
+    align-items: center;
+}
+
+.alq4 {
+    grid-area: rent4;
+    align-items: center;
+}
+
+/* Fin Grid Index */
+
+/* Inicio Media Queries Index */
+
+@media only screen and (min-width: 480px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 5% 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "actions actions"
+            "filters rent1"
+            "filters rent2"
+            "filters rent3"
+            "filters rent4";
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .itemText {
+        text-align: center;
+    }
+
+    .containerImgGrid img {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 3fr 3fr;
+        grid-template-rows: 8% 1fr 1fr;
+        grid-template-areas:
+            "actions actions actions"
+            "filters rent1 rent2"
+            "filters rent3 rent4";
+    }
+}
+
+/* Fin Media Queries Index */
+
+/* Inicio Estilos Alquiler */
+.propiedades {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.propiedades .cardsAlquiler {
+    border: solid rgb(199, 195, 195) 1px;
+}
+
+.propiedades div {
+    /* width: 100%; */
+    border-radius: 5px;
+    margin-bottom: 30px;
+    /* padding: 5px 5px; */
+}
+
+.propiedades div img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.propiedades div p {
+    font-size: 0.9em;
+    margin: 0 0 20px 20px;
+}
+
+.propiedades div ul {
+    margin: 10px 0 30px 40px;
+    font-size: 0.9em;
+}
+
+.propiedades div button {
+    border: none;
+    background-color: rgb(234, 245, 234);
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    padding: 12px;
+}
+
+.cardsAlquiler, button {
+    cursor: pointer;
+}
+
+/* Fin Estilos Alquiler */
+
+
+/* Inicion Media Queries Alquiler */
+@media only screen and (min-width: 1024px) {
+    .propiedades {
+        /* display: flex; */
+        flex-direction: row;
+    }
+
+    .cardsAlquiler {
+        width: 48%;
+    }
+
+    .propiedades .cardsAlquiler{
+        margin: 1%;
+    }
+
+}
+
