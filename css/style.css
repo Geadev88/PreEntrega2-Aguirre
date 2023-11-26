@@ -5,17 +5,28 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cormorant Garamond', serif;
-
 }
 
 .navbar {
     background-color: #b5caa6;
-    height: 70px;
     width: 100%;
-    position: static;
-    top: 0;
-    left: 0;
+    position: sticky;
 }
+
+.logo img {
+    width: 5em;
+}
+
+.nav-link {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+header img {
+    width: 100%;
+}
+
+
 
 .jumbotron {
     background-image: url(../assets/header/headerIndex.png);
@@ -30,7 +41,7 @@
     color: rgb(189, 223, 125);
     font-size: 50px;
     font-weight: bold;
-    margin-top: 20px;    
+    margin-top: 20px;
 }
 
 .logo img {
@@ -41,48 +52,6 @@
     font-size: 1.3em;
     font-weight: bold;
     color: black !important;
-}
-
-/* inicio nav viejo */
-/* nav {
-    background-color: #b5caa6;
-    display: flex;
-    padding: 20px;
-    width: 100%;
-    height: 80px;
-    top: 0px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    width: 5em;
-    margin: 1px;
-}
-
-.menu {
-    cursor: pointer;
-}
-
-.menu ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.menu ul li,
-a {
-    list-style: none;
-    text-decoration: none;
-    color: #000;
-    margin-right: 5px;
-    font-weight: bold;
-    font-size: 1em;
-} */
-/* Fin nav viejo */
-
-header img {
-    width: 100%;
-    /* position: relative; */
 }
 
 /* Inicio del Main */
@@ -325,7 +294,8 @@ footer svg {
     padding: 12px;
 }
 
-.cardsAlquiler, button {
+.cardsAlquiler,
+button {
     cursor: pointer;
 }
 
@@ -343,9 +313,8 @@ footer svg {
         width: 48%;
     }
 
-    .propiedades .cardsAlquiler{
+    .propiedades .cardsAlquiler {
         margin: 1%;
     }
 
 }
-
