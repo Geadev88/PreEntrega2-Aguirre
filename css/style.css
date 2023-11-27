@@ -71,6 +71,7 @@ h2 {
 
 .sectionMain1 {
     text-align: center;
+    text-wrap: pretty;
     margin-bottom: 50px;
 }
 
