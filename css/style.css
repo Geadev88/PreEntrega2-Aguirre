@@ -20,13 +20,18 @@
 .nav-link {
     font-size: 1.4em;
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: #ebebeb !important;
+    /* font-size: 1.5em; */
+    transform: scale(1.15);
 }
 
 header img {
     width: 100%;
 }
-
-
 
 .jumbotron {
     background-image: url(../assets/header/headerIndex.png);
@@ -145,7 +150,6 @@ footer svg {
 
 .containerImgGrid img:hover {
     transform: scale(1.10);
-    /* transform: scale(0.9); */
     border-radius: 25px;
 }
 
